@@ -1,26 +1,39 @@
-public class PythogreanTriplets 
+public class PythogreanTriplets
 {
-
     public static boolean isEven(double n)
     {
         return n % 2 == 0;
     }
+
     public static void main(String[] args)
     {
-        int n = 1;
-        double a = 2*n + 1;
-        double b = 2*n*(n+1);
-        double c = 2*n*(n+1) + 1;
-        while (a+b+c != 1000 && a+b+c <= 1000)
-        {
-            System.out.printf("a=%.0f, b=%.0f, c=%.0f : %.0f\n",a,b,c, a+b+c);
-            n++;
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int sum = 0;
+        int product = 0;
 
-            a = 2*n + 1;
-            b = 2*n*(n+1);
-            c = 2*n*(n+1) + 1;
+        for(int m = 2; m < 100; m++)
+        {
+            for(int n = 1; n < 100; n++)
+            {
+                while(m > n)
+                {
+                    a = (m * m) - (n * n);
+                    b = (2 * m) * n;
+                    c = (m * m) + (n * n);
+
+                    sum = a + b + c;
+                    if(sum == 1000)
+                    {
+                        product = a * b * c;
+                        System.out.print("a :" + a + "b :" + b + "c : " + c);
+                        System.out.println("Product is " + product);
+                        break;
+                    }
+                    break;
+                }
+            }
         }
-        if(a+b+c == 1000)
-            System.out.println("Result = " + a*b*c);
     }
 }
