@@ -246,7 +246,7 @@ int main(int argc, char **argv)
         {
             for(dir = 0; dir < 8; dir++)
             {
-                unsigned long prod = calc_largest_at(grid, M, N, i, j, dir, adjacents);                
+                unsigned long prod = calc_largest_at(grid, M, N, i, j, dir, adjacents);
                 if(prod > maxProd)
                     maxProd = prod;
             }

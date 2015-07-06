@@ -49,6 +49,7 @@ local.properties
 *.ilk
 *.meta
 *.obj
+*.o
 *.pch
 *.pdb
 *.pgc
@@ -120,6 +121,7 @@ UpgradeLog*.XML
 ## Windows
 ############
 
+*.exe
 # Windows image file caches
 Thumbs.db
 
