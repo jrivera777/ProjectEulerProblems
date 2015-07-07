@@ -7,13 +7,18 @@
 int main(int argc, char **argv)
 {
     int i, j;
-    size_t len = 0;
-    FILE *f;
-    int* ptr;
-    int digits[DIGITS] = {0};
-    char *numbers[NUM_COUNT];
     int carry = 0;
     int last_digit = DIGITS - 1;
+
+    size_t len = 0;
+
+    FILE *f;
+    int *ptr;
+
+    int digits[DIGITS] = {0};
+
+    char *numbers[NUM_COUNT];
+
 
     if(argc < 2)
     {
